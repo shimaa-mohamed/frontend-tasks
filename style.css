@@ -1,0 +1,62 @@
+@import url("https://fonts.google.com/specimen/Lexend+Deca");
+@import url("https://fonts.google.com/specimen/Big+Shoulders+Display");
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 15px;
+  /* text-align: center; */
+margin: auto;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.col1 {
+  background-color: hsl(31, 77%, 52%);
+}
+.col2 {
+  background-color: hsl(184, 100%, 22%);
+}
+.col3 {
+  background-color: hsl(179, 100%, 13%);
+}
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  color: hsl(0, 0%, 95%);
+  margin-top: 50px;
+  text-align: left;
+
+}
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  text-align: left;
+}
+button {
+  background-color: hsl(0, 0%, 95%);
+  padding: 10px 20px;
+  color: inherit;
+  border-radius: 50px;
+  margin-top: 50px;
+margin-left:50px}
+.column {
+  float: left;
+  width: 300px;
+  padding: 50px;
+  height: 500px; /* Should be removed. Only for demonstration */
+}
+.row{
+margin-top: 70px;
+margin-left: 300px;
+
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
