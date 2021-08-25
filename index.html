@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item item1">
+        <img class="logo" src="images/logo.svg" />
+        <h1>
+          WE'RE <br /><strong>
+            COMING <br />
+            SOON</strong
+          >
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis
+          praesentium accusantium porro quibusdam ducimus in explicabo officia
+          illo nisi velit temporibus enim, repellendus tempore!
+        </p>
+        <form>
+          <input id="mail" type="email" placeholder="Email Address" />
+          <button id="mybtn" type="submit" onclick="validateEmail(event)">
+            >
+          </button>
+        </form>
+        <p id="validate-res"></p>
+      </div>
+      <div class="flex-item item2"></div>
+    </div>
+    <script>
+      let message = "";
+      document.getElementById("validate-res").innerHTML = message;
+      function validateEmail(event) {
+        event.preventDefault();
+        const email = document.getElementById("mail").value;
+        const re =
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (email.length === 0) {
+          message = "Please enter email";
+          document.getElementById("validate-res").innerHTML = message;
+        }
+        else if(!re.test(String(email).toLowerCase())){
+            message="Please enter a valid email";
+            document.getElementById("validate-res").innerHTML = message;
+          }
+          else{
+            document.getElementById("validate-res").innerHTML = "done";
+          }
+      }
+    </script>
+  </body>
+</html>

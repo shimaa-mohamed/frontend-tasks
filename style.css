@@ -1,0 +1,75 @@
+body {
+    background-image: url("images/bg-pattern-desktop.svg");
+  }
+  .flex-container {
+    display: flex;
+    width: 70%;
+    margin-inline: auto;
+    /* background-color: yellow; */
+    height: 70vh;
+    margin-top: 60px;
+  }
+  .item1 {
+    width: 60%;
+    /* border: 10px solid; */
+    /* background-color: violet; */
+  }
+  .item2 {
+    background-image: url("images/hero-desktop.jpg");
+    background-size: 100% 100%;
+    width: 40%;
+  }
+  .logo {
+    margin-top: 30px;
+    margin-left: 100px;
+  }
+  h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    /* width: 300px; */
+    margin-top: 50px;
+    margin-left: 100px;
+    color: rgb(206, 151, 151);
+  }
+  p {
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 65%;
+    color: rgb(206, 151, 151);
+  }
+  form {
+    margin-top: 30px;
+    margin-left: 100px;
+    /* border-radius: 30%; */
+  }
+  strong {
+    color: black;
+  }
+  button {
+    width: 30%;
+    /* height: 30px; */
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    color: white;
+    border: none;
+  padding: 10px;  background-image: linear-gradient(rgb(248, 191, 191), rgb(238, 140, 140));
+  }
+  input{
+  height: 30px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border-style: none;
+    padding: 5px;
+    width: 70%;
+  
+  }
+  form{
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 50px;
+  width: 400px;}
