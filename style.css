@@ -1,6 +1,4 @@
-body {
-    background-image: url("images/bg-pattern-desktop.svg");
-  }
+
   .flex-container {
     display: flex;
     width: 100vw;
@@ -8,12 +6,13 @@ body {
     height: 100vh;
   }
   .item1 {
-    width: 55%;
+    width: 60%;
+    background-image: url('images/bg-pattern-desktop.svg');
+    background-size: cover;
   }
   .item2 {
-    background-image: url("images/hero-desktop.jpg");
-    background-size: 100% 100%;
-    width: 45%;
+    object-fit: contain;
+    width: 40%;
   }
   .logo {
     margin-top: 50px;
@@ -25,19 +24,20 @@ body {
     font-weight: 300;
     font-size: 60px;
     margin-top: 50px;
+    letter-spacing: .3em;
     margin-left: 200px;
     color: rgb(206, 151, 151);
   }
   p {
     margin-top: 30px;
     margin-left: 200px;
+    line-height: 1.5em;
     width: 65%;
     color: rgb(206, 151, 151);
   }
   form {
     margin-top: 30px;
     margin-left: 200px;
-    /* border-radius: 30%; */
   }
   strong {
     color: black;
@@ -62,8 +62,7 @@ body {
     border-bottom-right-radius: 50px;
     border-top-right-radius: 50px;
     border-style: none;
-    padding: 5px;
-    text-align: center;
+    padding: 5px 30px;
     width: 70%;
   
   }
@@ -76,4 +75,17 @@ body {
 
   input:focus{
       outline: none;
+  }
+  #error-img{
+      visibility: hidden;
+  }
+  form.error img#error-img{
+    visibility: visible;
+    margin-right: 5px;
+  }
+  form.error {
+      border: 1px solid red;
+  }
+  input::placeholder{
+    color: rgb(206, 151, 151);
   }

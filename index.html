@@ -30,15 +30,16 @@
           praesentium accusantium porro quibusdam ducimus in explicabo officia
           illo nisi velit temporibus enim, repellendus tempore!
         </p>
-        <form>
+        <form novalidate>
           <input id="mail" type="email" placeholder="Email Address" />
+          <img id="error-img" src="images/icon-error.svg">
           <button id="mybtn" type="submit" onclick="validateEmail(event)">
-            >
+            <img src="./images/icon-arrow.svg"/>
           </button>
         </form>
         <p id="validate-res"></p>
       </section>
-      <div class="flex-item item2"></div>
+      <img src="images/hero-desktop.jpg" class="flex-item item2"/>
     </div>
     <script>
       let message = "";
@@ -54,11 +55,16 @@
         }
         else if(!re.test(String(email).toLowerCase())){
             message="Please enter a valid email";
+            document.querySelector("form").classList.add("error")
             document.getElementById("validate-res").innerHTML = message;
           }
           else{
             document.getElementById("validate-res").innerHTML = "done";
           }
+          document.querySelector("form").addEventListener("keydown", () => {
+            document.querySelector("form").classList.remove("error");
+            document.getElementById("validate-res").innerHTML ="";
+        });
       }
     </script>
   </body>
