@@ -3,12 +3,42 @@ const form = document.getElementById("form");
 const itemsLeftSpan = document.getElementById("items-left");
 const submitBtn = document.getElementById("submit-btn");
 const tabBtns = document.querySelectorAll(".tab");
+const body=document.querySelector("body");
+const searchRegion=document.querySelector(".search");
+const todosContainer=document.querySelector(".todos-container");
 const listLabels = document.getElementsByClassName("list-label");
 let mylist = document.getElementById("my-todos");
-
+let dark= true
 // initial values
 let myarr = [];
+function changeTheme(){
+  const themeBtn=document.getElementById("theme-btn");
+  const themeLogo=document.getElementById("theme-logo");
+  const themeImg=document.getElementById("top-img");
+  themeBtn.addEventListener("click",()=>{
+    dark=!dark;
+    if(dark){
+      themeLogo.src="images/icon-moon.svg";
+    themeImg.src="images/bg-desktop-light.jpg"
+    body.style.backgroundColor="hsl(0, 0%, 98%)";
+    searchRegion.style.backgroundColor="hsl(0, 0%, 98%)";
+    todosContainer.style.backgroundColor="hsl(0, 0%, 98%)";
+    todo.style.backgroundColor="hsl(0, 0%, 98%)";
+    todo.style.color="#000"
+    }
+    else{
+      themeLogo.src="images/icon-sun.svg";
+      themeImg.src="images/bg-desktop-dark.jpg";
+      body.style.backgroundColor="hsl(235, 24%, 19%)";
+      searchRegion.style.backgroundColor="hsl(235, 24%, 19%)";
+      todosContainer.style.backgroundColor="hsl(235, 24%, 19%)";
+      todo.style.backgroundColor="hsl(235, 24%, 19%)";
+      todo.style.color="#fff"
 
+    }
+    
+  })
+}
 function generateMyCustomList(val) {
   const newItem = document.createElement("li");
   newItem.innerHTML = ` <div class="round">
@@ -148,5 +178,6 @@ submitBtn.addEventListener("click", (e) => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 });
+changeTheme();
 toggleTabs();
 ///////////////////////////////////////////
