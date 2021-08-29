@@ -8,10 +8,13 @@ const searchRegion=document.querySelector(".search");
 const todosContainer=document.querySelector(".todos-container");
 const listLabels = document.getElementsByClassName("list-label");
 let mylist = document.getElementById("my-todos");
-let dark= true
+
+
 
 // initial values
 let myarr = [];
+let dark= true;
+
 function changeTheme(){
   const themeBtn=document.getElementById("theme-btn");
   const themeLogo=document.getElementById("theme-logo");
@@ -69,7 +72,6 @@ function deleteListItem(e) {
   if(node.id==="my-todos"){
     node=e.target.parentNode;
   }
-  // console.log(node);
   mylist.removeChild(node);
   let newarr = [];
   myarr.forEach((item) => {
@@ -78,7 +80,6 @@ function deleteListItem(e) {
     }
   });
   myarr = newarr;
-  // console.log(myarr);
   allItems();
   handleLeftItems();
 }
@@ -88,7 +89,6 @@ function labelListner(labelVal) {
     toogleItemState(labelVal);
     console.log("toggled");
     handleLeftItems();
-    // allItems();
   });
   let delBtn = document
     .getElementsByClassName("del-btn")
@@ -96,8 +96,6 @@ function labelListner(labelVal) {
   delBtn.addEventListener("click", (e) => {
     deleteListItem(e);
   });
-
-  //   console.log("#################3");
 }
 function removeAllChildNodes(parent) {
   while (parent.firstChild) {
@@ -201,4 +199,9 @@ form.addEventListener("submit", (e) => {
 });
 changeTheme();
 toggleTabs();
-///////////////////////////////////////////
+
+
+/////////////////// for reordering by dragging////////////////////////
+new Sortable(mylist,{
+  animation: 350
+});
