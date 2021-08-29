@@ -9,6 +9,7 @@ const todosContainer=document.querySelector(".todos-container");
 const listLabels = document.getElementsByClassName("list-label");
 let mylist = document.getElementById("my-todos");
 let dark= true
+
 // initial values
 let myarr = [];
 function changeTheme(){
@@ -79,6 +80,7 @@ function labelListner(labelVal) {
   labelItem.addEventListener("click", () => {
     toogleItemState(labelVal);
     console.log("toggled");
+    handleLeftItems();
   });
   let delBtn = document
     .getElementsByClassName("del-btn")
@@ -158,7 +160,13 @@ function toggleTabs() {
   }
 }
 function handleLeftItems() {
-  const numberOfItems = mylist.childElementCount;
+  let numberOfItems = 0;
+  myarr.forEach((item)=>{
+    if(item["completed"]===false){
+      numberOfItems++;
+    }
+  })
+  console.log(numberOfItems);
   itemsLeftSpan.innerHTML = `${numberOfItems} items left`;
 }
 
