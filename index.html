@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img id="top-img" src="images/bg-desktop-dark.jpg" />
+      <div class="h1-logo-container">
+        <h1>TODO</h1>
+        <button>
+          <img id="theme-logo" src="images/icon-sun.svg" />
+        </button>
+      </div>
+    </header>
+
+    <form id="form">
+      <section class="search">
+        <div class="round">
+          <input type="checkbox" id="checkbox" />
+          <label for="checkbox"></label>
+        </div>
+        <input id="search-input" type="text" placeholder="Create new todo" />
+        <input type="submit" id="submit-btn"/>
+      </section>
+      <section class="todos-container">
+        <ul id="my-todos">
+        </ul>
+        <div class="list-footer">
+          <span id="items-left">0 items left</span>
+          <div class="tabs">
+            <button class="tab active">All</button>
+            <button class="tab">Active</button>
+            <button class="tab">Completed</button>
+          </div>
+          <button>Clear completed</button>
+        </div>
+      </section>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

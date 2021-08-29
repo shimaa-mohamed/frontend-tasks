@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+body {
+  background-color: hsl(235, 21%, 11%);
+  padding: 0px;
+  margin: 0px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+}
+#top-img {
+  width: 100%;
+  height: 37.5vh;
+}
+form {
+  width: 37.5%;
+  margin-inline: auto;
+  position: relative;
+  margin-top: -160px;
+  /* border: 5px solid darkred; */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  /* height: 60vh; */
+}
+.search {
+  background-color: hsl(235, 24%, 19%);
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+
+#search-input {
+  background-color: hsl(235, 24%, 19%);
+  width: 90%;
+  border-style: none;
+  color: #fff;
+}
+
+.todos-container {
+  margin-top: 30px;
+  max-height: 444px;
+  overflow: auto;
+  background-color: hsl(235, 24%, 19%);
+}
+.h1-logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 37.5%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 30px;
+}
+header {
+  position: relative;
+}
+#theme-logo {
+  width: 30px;
+  height: 30px;
+}
+
+button {
+  background-color: transparent;
+  border-style: none;
+}
+ul {
+  list-style: none;
+  padding: 0px 10px;
+}
+li {
+  display: flex;
+  list-style: none;
+  padding: 5px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid hsl(234, 11%, 52%);
+  align-items: center;
+  justify-content: space-between;
+}
+.list-footer {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: none;
+}
+span {
+  color: hsl(234, 11%, 52%);
+}
+
+div button {
+  color: hsl(234, 11%, 52%);
+}
+.tabs .active {
+  color: hsl(220, 98%, 61%);
+}
+div button:hover {
+  color: #fff;
+}
+li span {
+  display: inline-block;
+  margin-left: 10px;
+}
+button.del-btn:hover {
+    background-color: #fff;
+    opacity: 0.3;
+  }
+  input[type="text"]::placeholder{
+      color: hsl(234, 11%, 52%);
+      font: 18px "Josefin sans","sans-serif";
+  }
+  input[type="text"]:focus {
+    outline: none;
+    color: hsl(234, 11%, 52%);
+    font: 18px "Josefin sans","sans-serif";
+    background:hsl(235, 24%, 19%) ;
+}
+  input[type="submit"]{
+      visibility: hidden;
+  }
+/* hide the inital checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* create custom checkbox */
+.round {
+  position: relative;
+  padding: 5px;
+}
+label {
+  color: hsl(234, 11%, 52%);
+  box-sizing: border-box;
+  margin-left: 30px;
+}
+label::before {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  content: url("images/icon-check.svg");
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 50%;
+  border: 2px solid hsl(233, 14%, 35%);
+}
+input[type="checkbox"]:checked + label::before {
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  visibility: visible;
+}
+input[type="checkbox"]:checked + label{
+    text-decoration: line-through;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: -0.5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid hsl(233, 14%, 35%);
+}
+label:hover::after {
+  border: double 4px transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(hsl(235, 24%, 19%), hsl(235, 24%, 19%)),
+    radial-gradient(circle at top left, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px rgb(37, 39, 60) inset;
+  /* color: rgb(119, 122, 146); */
+}
+input[type="text"]{
+    color: hsl(234, 11%, 52%);
+    font: 18px "Josefin sans","sans-serif";
+}
