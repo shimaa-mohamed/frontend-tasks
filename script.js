@@ -65,15 +65,22 @@ function toogleItemState(val) {
   inputItem.checked = toggleVal;
 }
 function deleteListItem(e) {
-  const nodeId = e.target.parentNode.parentNode;
-  mylist.removeChild(document.getElementById(nodeId.id));
+  let node = e.target.parentNode.parentNode;
+  if(node.id==="my-todos"){
+    node=e.target.parentNode;
+  }
+  // console.log(node);
+  mylist.removeChild(node);
   let newarr = [];
   myarr.forEach((item) => {
-    if (`li-${item["name"]}` != nodeId.id) {
+    if (`li-${item["name"]}` != node.id) {
       newarr.push(item);
     }
   });
   myarr = newarr;
+  // console.log(myarr);
+  allItems();
+  handleLeftItems();
 }
 function labelListner(labelVal) {
   const labelItem = document.getElementById(labelVal);
@@ -81,6 +88,7 @@ function labelListner(labelVal) {
     toogleItemState(labelVal);
     console.log("toggled");
     handleLeftItems();
+    // allItems();
   });
   let delBtn = document
     .getElementsByClassName("del-btn")
@@ -122,7 +130,10 @@ function allItems() {
   removeAllChildNodes(mylist);
   myarr.forEach((listItemObject) => {
     const newListNode = generateMyCustomList(listItemObject["name"]);
+    newListNode.classList.add("list-item");
+    newListNode.setAttribute("id", `li-${listItemObject["name"]}`);
     mylist.append(newListNode);
+    labelListner(listItemObject["name"]);
     let inputItem = document.getElementById(`item-${listItemObject["name"]}`);
     inputItem.checked = listItemObject["completed"];
   });
@@ -138,6 +149,8 @@ function clearCompleted(){
 function clearCompletedListner(){
   document.getElementById("del-btn-all").addEventListener("click",()=>{
     clearCompleted();
+    console.log(myarr);
+    allItems();
   })
 }
 function toggleTabs() {
