@@ -30,7 +30,6 @@ function toogleItemState(val) {
     if (listItem["name"] === val) {
       listItem["completed"] = !listItem["completed"];
       toggleVal=!listItem["completed"];
-    //   console.log("toggled 🎈🎈🎈lolololy ");
     }
   })
   let inputItem=document.getElementById(`item-${val}`);
