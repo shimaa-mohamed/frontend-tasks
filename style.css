@@ -186,3 +186,8 @@ input[type="text"]{
     color: hsl(234, 11%, 52%);
     font: 18px "Josefin sans","sans-serif";
 }
+#note{
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  color: hsl(234, 11%, 52%);
+}

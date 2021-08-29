@@ -6,6 +6,7 @@ const tabBtns = document.querySelectorAll(".tab");
 const body=document.querySelector("body");
 const searchRegion=document.querySelector(".search");
 const todosContainer=document.querySelector(".todos-container");
+const note=document.querySelector("#note");
 const listLabels = document.getElementsByClassName("list-label");
 let mylist = document.getElementById("my-todos");
 
@@ -29,6 +30,7 @@ function changeTheme(){
     todosContainer.style.backgroundColor="hsl(0, 0%, 98%)";
     todo.style.backgroundColor="hsl(0, 0%, 98%)";
     todo.style.color="#000"
+    note.style.color="#000"
     }
     else{
       themeLogo.src="images/icon-sun.svg";
@@ -38,6 +40,7 @@ function changeTheme(){
       todosContainer.style.backgroundColor="hsl(235, 24%, 19%)";
       todo.style.backgroundColor="hsl(235, 24%, 19%)";
       todo.style.color="#fff"
+      note.style.color="hsl(234, 11%, 52%)"
 
     }
     
