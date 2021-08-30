@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: hsl(185, 41%, 84%);
+  font-family: 'Space Mono', monospace;
+}
+header {
+  text-align: center;
+}
+main {
+  display: flex;
+  width: 50%;
+  margin-inline: auto;
+  margin-top: 50px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  padding: 20px;
+}
+form{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+aside {
+    width: 40%;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#select-tip-wrapper{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.wrap-result{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+fieldset{
+    border: none;
+}
+input[type="number"]{
+    border: none;
+    outline: none;
+    text-align: right;
+    width: 90%;
+    background-color: hsl(189, 41%, 97%);
+}
+.input-wrapper{
+    background-color: hsl(189, 41%, 97%);
+    padding: 10px;
+}
+.amount{
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+    font-size: 40px;
+}
+#reset{
+background-color:hsl(172, 67%, 45%) ;
+padding: 10px;
+color: hsl(183, 100%, 15%);
+font-size: 20px;
+margin: 40px 40px;
+border: none;
+border-radius: 5px;}
+.amount-type{
+    color: hsl(0, 0%, 100%) ;
+}
+.person{
+    color: hsl(184, 14%, 56%);
+}
+
+input[type="radio"]{
+    display: none;
+}
+.custom-radio{
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    padding: 3px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.item-wrapper{
+    margin: 5px;
+}
+#custom{
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(186, 14%, 43%);
+    font-size: 20px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    padding: 3px;
+    width: 100px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+h1{
+    text-transform: uppercase;
+    color: hsl(186, 14%, 43%);
+    font-weight: 400;
+    font-size: 30px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  color:hsl(183, 100%, 15%);
+font-weight: 600;
+font-size: 20px;}

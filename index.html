@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>spli<br/>tter</h1></header>
+    <main>
+      <form>
+        <fieldset>
+          <legend>Bill</legend>
+          <label for="bill"></label>
+          <div class="input-wrapper">
+            <img src="images/icon-dollar.svg" />
+            <input id="bill" type="number" placeholder="0" />
+          </div>
+        </fieldset>
+        <fieldset id="select-tip-wrapper">
+          <legend>Select Tip %</legend>
+          <div class="item-wrapper">
+            <input id="5%" type="radio" />
+            <label class="custom-radio" for="5%">5%</label>
+          </div>
+          <div class="item-wrapper">
+            <input id="10%" type="radio" />
+            <label class="custom-radio" for="10%">10%</label>
+          </div>
+          <div class="item-wrapper">
+            <input id="15%" type="radio" />
+            <label class="custom-radio" for="15%">15%</label>
+          </div>
+          <div class="item-wrapper">
+            <input id="25%" type="radio" />
+            <label class="custom-radio" for="25%">25%</label>
+          </div>
+          <div class="item-wrapper">
+            <input id="50%" type="radio" />
+            <label class="custom-radio" for="50%">50%</label>
+          </div>
+          <div class="item-wrapper">
+            <input id="custom" type="number" placeholder="Custom" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Number of People</legend>
+          <label for="NumberOfPeople"></label>
+          <div class="input-wrapper">
+            <img src="images/icon-person.svg" />
+            <input id="NumberOfPeople" type="number" placeholder="0" />
+          </div>
+        </fieldset>
+      </form>
+      <aside>
+        <section>
+          <div class="wrap-result">
+            <div>
+              <p class="amount-type">Tip amount</p>
+              <p class="person">/ person</p>
+            </div>
+            <p class="amount">$0.00</p>
+          </div>
+          <div class="wrap-result">
+            <div>
+              <p class="amount-type">Total</p>
+              <p class="person">/ person</p>
+            </div>
+            <p class="amount">$0.00</p>
+          </div>
+        </section>
+
+        <button id="reset">RESET</button>
+      </aside>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
