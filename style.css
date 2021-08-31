@@ -58,7 +58,7 @@ input[type="number"]{
 .amount{
     color: hsl(172, 67%, 45%);
     font-weight: 700;
-    font-size: 40px;
+    font-size: 2em;
 }
 #reset{
 background-color:hsl(172, 67%, 45%) ;
@@ -77,6 +77,9 @@ border-radius: 5px;}
 
 input[type="radio"]{
     display: none;
+}
+input[type="radio"]:checked + label{
+background-color:hsl(172, 67%, 45%) ;
 }
 .custom-radio{
     background-color: hsl(183, 100%, 15%);
@@ -112,6 +115,15 @@ h1{
     font-weight: 400;
     font-size: 30px;
 }
+
+.input-wrapper.error{
+    border: 2px solid red;
+}
+
+#custom-wrapper.error{
+    border: 2px solid red;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

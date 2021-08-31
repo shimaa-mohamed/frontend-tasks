@@ -14,43 +14,43 @@
         <fieldset>
           <legend>Bill</legend>
           <label for="bill"></label>
-          <div class="input-wrapper">
+          <div class="input-wrapper" id="bill-wrapper">
             <img src="images/icon-dollar.svg" />
-            <input id="bill" type="number" placeholder="0" />
+            <input id="bill" type="number" placeholder="0" min="0" />
           </div>
         </fieldset>
         <fieldset id="select-tip-wrapper">
           <legend>Select Tip %</legend>
           <div class="item-wrapper">
-            <input id="5%" type="radio" />
-            <label class="custom-radio" for="5%">5%</label>
+            <input id="five" type="radio" name="percentage" value="5" />
+            <label class="custom-radio" for="five">5%</label>
           </div>
           <div class="item-wrapper">
-            <input id="10%" type="radio" />
-            <label class="custom-radio" for="10%">10%</label>
+            <input id="ten" type="radio" name="percentage"  value="10" />
+            <label class="custom-radio" for="ten">10%</label>
           </div>
           <div class="item-wrapper">
-            <input id="15%" type="radio" />
-            <label class="custom-radio" for="15%">15%</label>
+            <input id="fiften" type="radio" name="percentage"  value="15" />
+            <label class="custom-radio" for="fiften">15%</label>
           </div>
           <div class="item-wrapper">
-            <input id="25%" type="radio" />
-            <label class="custom-radio" for="25%">25%</label>
+            <input id="twenty-five" type="radio" name="percentage"  value="25" />
+            <label class="custom-radio" for="twenty-five">25%</label>
           </div>
           <div class="item-wrapper">
-            <input id="50%" type="radio" />
-            <label class="custom-radio" for="50%">50%</label>
+            <input id="fifty" type="radio" name="percentage"  value="50" />
+            <label class="custom-radio" for="fifty">50%</label>
           </div>
-          <div class="item-wrapper">
-            <input id="custom" type="number" placeholder="Custom" />
+          <div class="item-wrapper" id="custom-wrapper">
+            <input id="custom" type="number" placeholder="Custom" max="100"/>
           </div>
         </fieldset>
         <fieldset>
           <legend>Number of People</legend>
           <label for="NumberOfPeople"></label>
-          <div class="input-wrapper">
+          <div class="input-wrapper" id="num-people-wrapper">
             <img src="images/icon-person.svg" />
-            <input id="NumberOfPeople" type="number" placeholder="0" />
+            <input id="numberOfPeople" type="number" placeholder="0" min="1" />
           </div>
         </fieldset>
       </form>
@@ -61,14 +61,14 @@
               <p class="amount-type">Tip amount</p>
               <p class="person">/ person</p>
             </div>
-            <p class="amount">$0.00</p>
+            <p id="tip-per-person" class="amount">$0.00</p>
           </div>
           <div class="wrap-result">
             <div>
               <p class="amount-type">Total</p>
               <p class="person">/ person</p>
             </div>
-            <p class="amount">$0.00</p>
+            <p id="bill-per-person" class="amount">$0.00</p>
           </div>
         </section>
 
