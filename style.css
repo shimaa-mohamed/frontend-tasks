@@ -54,10 +54,7 @@
   }
   input{
     height: 30px;
-    border-bottom-left-radius: 50px;
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-top-right-radius: 50px;
+    border-radius : 50px;
     border-style: none;
     padding: 5px 30px;
     width: 70%;
