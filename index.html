@@ -9,12 +9,26 @@
   </head>
   <body>
     <header>
-      <img src="images/desktop/image-header.jpg" />
+      <img src="images/desktop/image-header.jpg" alt="orange" class="header-orange-img"/>
       <div class="header-content">
         <div class="header-bar-div">
           <p>sunnyside</p>
-          <nav>
+          <nav class="nav-large-viewport">
             <ul>
+              <li><a>About</a></li>
+              <li><a>Services</a></li>
+              <li><a>Projects</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </nav>
+          <a class="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+          <nav class="nav-small-viewport ">
+            <ul>
+              <!-- <img src="images/mobile/nav-border.png" alt="border" class="nav-border"/> -->
               <li><a>About</a></li>
               <li><a>Services</a></li>
               <li><a>Projects</a></li>
@@ -23,7 +37,7 @@
           </nav>
         </div>
         <h1>we are creatives</h1>
-        <img src="images/icon-arrow-down.svg" />
+        <img src="images/icon-arrow-down.svg" alt="arrow-down" />
       </div>
     </header>
     <main>
@@ -52,8 +66,8 @@
           </p>
           <a class="learn-more-2">learn more</a>
         </div>
-        <div class="item-content ">
-          <img class="img-behind-text" src="images/desktop/image-graphic-design.jpg" alt="graphic" />
+        <div class="item-content img-and-text">
+          <img class="img-behind-text img-behind-text-1" src="images/desktop/image-graphic-design.jpg" alt="graphic" />
           <div class="text-above-item">
             <h3>Graphic design</h3>
             <p>
@@ -63,8 +77,8 @@
             </p>
           </div>
         </div>
-        <div class="item-content">
-          <img class="img-behind-text" src="images/desktop/image-photography.jpg" alt="photography" />
+        <div class="item-content img-and-text">
+          <img class="img-behind-text img-behind-text-2 " src="images/desktop/image-photography.jpg" alt="photography" />
           <div class="text-above-item">
             <h3>Photography</h3>
             <p>
@@ -149,5 +163,6 @@
         </ul>
       </nav>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
