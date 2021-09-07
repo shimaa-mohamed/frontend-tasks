@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/29af5846f8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>Where is the world?</h1>
+        <div>
+            <button><i class="fas fa-moon icon"></i></button>
+            <span>Dark Mode</span>
+        </div>
+    </header>
+  
+    <main >
+          <!-- search and filter div -->
+        <form>
+            <div class="search-div">
+                <button type="submit"><i class="fa fa-search icon" aria-hidden="true"></i></button>
+                <input type="text" placeholder="Search for a country.." name="searchInput">
+            </div> 
+            <select name="filter" id="filter">
+                <option value="" disabled selected>Filter by Region</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+              </select>
+          </form>
+          <!-- grid container -->
+        <div class="grid">
+            
+        </div>
+    </main>
+        <!-- card design that will be added in js and rendered from the script -->
+    <!-- country details page -->
+    <script src="script.js"></script>
+</body>
+</html>
