@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import { Link } from "react-router-dom";
-import "../index.css";
+import "../index.scss";
 import BasicDetails from "./BasicDetails";
 class Details extends Component {
   state = {
@@ -20,14 +20,14 @@ class Details extends Component {
       });
   };
 
-  handleRefresh=()=>{
+  handleRefresh = () => {
     this.getCountryByCode(this.props.match.params.countryCode);
-  }
+  };
   componentDidMount() {
     this.getCountryByCode(this.props.match.params.countryCode);
   }
   render() {
-    const { country} = this.state;
+    const { country } = this.state;
     this.handleRefresh(this.props.match.params.countryCode);
 
     return (

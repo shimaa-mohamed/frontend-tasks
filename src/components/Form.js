@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import "../index.css";
+import "../index.scss";
 
 class Form extends Component {
   state = {
     searchVal: "",
     filterVal: "",
   };
-  
+
   handleSearch = (e) => {
     this.setState({ searchVal: e.target.value });
     this.props.getCountryByName(e.target.value);
@@ -17,7 +17,10 @@ class Form extends Component {
   };
   handleForm = (e) => {
     e.preventDefault();
-    if (this.state.searchVal.length === 0 && this.state.filterVal.length === 0) {
+    if (
+      this.state.searchVal.length === 0 &&
+      this.state.filterVal.length === 0
+    ) {
       this.props.getAll();
     }
   };

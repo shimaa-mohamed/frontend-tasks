@@ -1,59 +1,59 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../index.css";
+import "../index.scss";
 class BasicDetails extends Component {
-    state={
-        bordersNames:[],
-        bordersCode:[],
-        bordersArr:[]
-    }
+  state = {
+    bordersNames: [],
+    bordersCode: [],
+    bordersArr: [],
+  };
 
-  componentDidMount(){
-      this.setState({bordersCode:this.props.country.borders});
+  componentDidMount() {
+    this.setState({ bordersCode: this.props.country.borders });
   }
 
   render() {
-    const { country} = this.props;
-    let i=0;
-        return (
-      <div className="details-card-wrapper">
+    const { country } = this.props;
+    let i = 0;
+    return (
+      <div className="details-wrapper">
         <img
-          className="details-card-img"
+          className="details-wrapper__img"
           src={country.flag}
           style={{ width: "100px", height: "100px" }}
           alt="germanyFlag"
         />
-        <div className="details-card-content">
+        <div className="details-wrapper__content">
           <h2>{country.name}</h2>
-          <div className="all-except-borders">
-            <div calss="right-side">
+          <div className="details-wrapper__not-borders">
+            <div>
               <p>
                 Native Name:&nbsp;
-                <span className="info"> {country.nativeName}</span>
+                <span > {country.nativeName}</span>
               </p>
               <p>
                 population:&nbsp;
-                <span className="info"> {country.population}</span>
+                <span > {country.population}</span>
               </p>
               <p>
-                Region:&nbsp; <span className="info"> {country.region}</span>
+                Region:&nbsp; <span > {country.region}</span>
               </p>
               <p>
                 Sub Region: &nbsp;
-                <span className="info"> {country.subregion}</span>
+                <span > {country.subregion}</span>
               </p>
               <p>
-                Capital:&nbsp; <span className="info">{country.capital}</span>
+                Capital:&nbsp; <span >{country.capital}</span>
               </p>
             </div>
-            <div className="left-side">
+            <div>
               <p>
                 Top Level Domain:&nbsp;
-                <span className="info">{country.topLevelDomain}</span>
+                <span >{country.topLevelDomain}</span>
               </p>
               <p>
                 currencies:&nbsp;{" "}
-                <span className="info currencies">
+                <span >
                   {country.currencies &&
                     country.currencies.map((curr, index) =>
                       index === country.currencies.length - 1
@@ -64,7 +64,7 @@ class BasicDetails extends Component {
               </p>
               <p>
                 Languages: &nbsp;{" "}
-                <span className="info languages">
+                <span >
                   {country.languages &&
                     country.languages.map((lang, index) =>
                       index === country.languages.length - 1
@@ -77,11 +77,11 @@ class BasicDetails extends Component {
           </div>
           <p>
             Border Countries:&nbsp;
-            <span className="info borders">
+            <span className="details-wrapper__borders">
               {country.borders &&
                 country.borders.map((borderCountry) => (
                   <Link
-                  key={i++}
+                    key={i++}
                     to={`/details/${borderCountry}`}
                     className="border-country"
                   >
