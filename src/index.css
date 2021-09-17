@@ -1,13 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 body {
+  background-color: #212e37;
+  font-family: "Nunito Sans", sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2b3743;
+  color: #fff;
+  align-items: center;
+  padding: 5px 20px;
+}
+h1 {
+  font-size: 25px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+.card {
+  grid-column: span 3;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #2b3743;
+  margin: 20px 40px;
+  /* align-items: center; */
+}
+.grid-img {
+  min-width: 100%;
+  min-height: 190px;
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+}
+span {
+  color: #fff;
+  font-weight: 100;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card-content {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+select {
+  background-color: #2b3743;
+  color: #fff;
+  padding: 0px 10px;
+}
+input[type="text"] {
+  color: #fff;
+  background-color: #2b3743;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+input[type="text"]::placeholder {
+  color: #fff;
+  background-color: #2b3743;
+}
+
+.search-div {
+  color: #fff;
+  background-color: #2b3743;
+  padding: 15px;
+  display: flex;
+  width: 30vw;
+}
+button {
+  background-color: #2b3743;
+  border: none;
+}
+.icon {
+  color: #fff;
+  background-color: #2b3743;
+  margin-right: 10px;
+}
+h2 {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.details-card-wrapper {
+  display: flex;
+  margin-inline: auto;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+  height: 60vh;
+  color: #fff;
+  width: 90%;
+}
+.details-card-img {
+  min-width: 50%;
+  object-fit: cover;
+  min-height: 100%;
+}
+.details-card-content {
+  width: 50%;
+  padding: 20px;
+  margin-left: 30px;
+}
+.border-country {
+  color: #fff;
+  display: inline-block;
+  padding: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: #2b3743;
+}
+
+p {
+  font-size: 0.8rem;
+  line-height: 0.8em;
+  text-align: left;
+  font-weight: 600;
+}
+
+.back-btn {
+  color: #fff;
+  background-color: #2b3743;
+  padding: 5px;
+  width: 100px;
+  display: inline-block;
+  margin: 10px 60px;
+  text-align: center;
+}
+.all-except-borders {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 400px) {
+  .card {
+    grid-column: span 12;
+  }
+  form {
+    display: block;
+  }
+  .search-div {
+    width: 95%;
+    margin: 5px;
+    padding: 15px 0px;
+    box-sizing: border-box;
+  }
+  input[type="text"] {
+    width: 95%;
+  }
+  .details-card-wrapper {
+    display: block;
+  }
+  .all-except-borders {
+    display: block;
+  }
+  .details-card-img {
+    min-width: 100%;
+    min-height: 40vh;
+  }
+  .details-card-content {
+    min-width: 100%;
+    margin: 5px;
+  }
+  .borders {
+    display: block;
+    margin: 10px 5px;
+  }
+  .back-btn {
+    margin: 10px 20px;
+  }
+  .filter {
+    display: block;
+  }
+  select {
+    margin: 5px;
+    padding: 7px;
+  }
+  h1{
+    font-size:20px ;
+  }
 }
