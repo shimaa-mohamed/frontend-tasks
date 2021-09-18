@@ -1,18 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+$dark-grey:#212e37;
+$light-grey:#2b3743;
+$black:#000;
+$white:#fff;
 body {
-  background-color: #212e37;
+  background-color:$dark-grey;
+  color: $white;
   font-family: "Nunito Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
+
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #2b3743;
-  color: #fff;
+  background-color: $light-grey;
+  color: inherit;
   align-items: center;
   padding: 5px 20px;
 }
+
 h1 {
   font-size: 25px;
 }
@@ -23,14 +31,15 @@ h1 {
 }
 .card {
   grid-column: span 3;
-  color: #fff;
+  color: inherit;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #2b3743;
+  background-color: $light-grey;
   margin: 20px 40px;
   /* align-items: center; */
 }
+
 .grid-img {
   min-width: 100%;
   min-height: 190px;
@@ -40,7 +49,7 @@ a {
   text-decoration: none;
 }
 span {
-  color: #fff;
+  color: inherit;
   font-weight: 100;
 }
 form {
@@ -56,36 +65,38 @@ form {
 }
 
 select {
-  background-color: #2b3743;
-  color: #fff;
+  background-color: $light-grey;
+  color: inherit;
   padding: 0px 10px;
 }
 input[type="text"] {
-  color: #fff;
-  background-color: #2b3743;
+  color: inherit;
+  background-color: $light-grey;
   outline: none;
   border: none;
   width: 100%;
 }
+
 input[type="text"]::placeholder {
-  color: #fff;
-  background-color: #2b3743;
+  color: inherit;
+  background-color: $light-grey;
 }
 
 .search-div {
-  color: #fff;
-  background-color: #2b3743;
+  color: inherit;
+  background-color: $light-grey;
   padding: 15px;
   display: flex;
   width: 30vw;
 }
+
 button {
-  background-color: #2b3743;
+  background-color: $light-grey;
   border: none;
 }
 .icon {
-  color: #fff;
-  background-color: #2b3743;
+  color: $white;
+  background-color: $light-grey;
   margin-right: 10px;
 }
 h2 {
@@ -100,7 +111,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   height: 60vh;
-  color: #fff;
+  color: inherit;
   width: 90%;
   &__img {
     min-width: 50%;
@@ -120,12 +131,13 @@ h2 {
 }
 
 .border-country {
-  color: #fff;
+  color: inherit;
   display: inline-block;
   padding: 10px;
   margin-right: 5px;
   margin-bottom: 5px;
-  background-color: #2b3743;
+  background-color: $light-grey;
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.17);
 }
 
 p {
@@ -136,8 +148,8 @@ p {
 }
 
 .back-btn {
-  color: #fff;
-  background-color: #2b3743;
+  color: inherit;
+  background-color: $light-grey;
   padding: 5px;
   width: 100px;
   display: inline-block;
@@ -157,11 +169,11 @@ p {
 
   .card {
     grid-column: span 3;
-    color: #fff;
+    color: inherit;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: #2b3743;
+    background-color: $light-grey;
     margin: 20px 10px;
     /* align-items: center; */
   }

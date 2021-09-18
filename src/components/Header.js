@@ -6,12 +6,11 @@ class Header extends Component {
     return (
       <header>
         <h1>Where is the world?</h1>
-        <div>
-          <button>
+          <button onClick={this.props.toggleTheme}>
             <i className="fas fa-moon icon"></i>
-          </button>
+          
           <span>Dark Mode</span>
-        </div>
+          </button>
       </header>
     );
   }

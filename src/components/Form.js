@@ -9,11 +9,14 @@ class Form extends Component {
 
   handleSearch = (e) => {
     this.setState({ searchVal: e.target.value });
-    this.props.getCountryByName(e.target.value);
+    if(e.target.value.length){
+      this.props.searchByName(e.target.value);
+    }
+    else{this.props.showAll();}
   };
   handleFilter = (e) => {
     this.setState({ filterVal: e.target.value });
-    this.props.getCountryByRegion(e.target.value);
+    this.props.searchByRegion(e.target.value);
   };
   handleForm = (e) => {
     e.preventDefault();
@@ -21,7 +24,7 @@ class Form extends Component {
       this.state.searchVal.length === 0 &&
       this.state.filterVal.length === 0
     ) {
-      this.props.getAll();
+      this.props.showAll();
     }
   };
   handleSubmit = (e) => {

@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import "../index.scss";
 class BasicDetails extends Component {
   state = {
-    bordersNames: [],
-    bordersCode: [],
-    bordersArr: [],
+    bordersCode: []
   };
 
   componentDidMount() {
@@ -14,7 +12,6 @@ class BasicDetails extends Component {
 
   render() {
     const { country } = this.props;
-    let i = 0;
     return (
       <div className="details-wrapper">
         <img
@@ -52,7 +49,7 @@ class BasicDetails extends Component {
                 <span >{country.topLevelDomain}</span>
               </p>
               <p>
-                currencies:&nbsp;{" "}
+                currencies:&nbsp;
                 <span >
                   {country.currencies &&
                     country.currencies.map((curr, index) =>
@@ -63,7 +60,7 @@ class BasicDetails extends Component {
                 </span>
               </p>
               <p>
-                Languages: &nbsp;{" "}
+                Languages: &nbsp;
                 <span >
                   {country.languages &&
                     country.languages.map((lang, index) =>
@@ -81,7 +78,7 @@ class BasicDetails extends Component {
               {country.borders &&
                 country.borders.map((borderCountry) => (
                   <Link
-                    key={i++}
+                    key={borderCountry}
                     to={`/details/${borderCountry}`}
                     className="border-country"
                   >

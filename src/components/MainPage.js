@@ -3,70 +3,53 @@ import Header from "./Header";
 import { Link } from "react-router-dom";
 import CountryCard from "./CountryCard";
 import "../index.scss";
+import { getAll, getCountryByName, getCountryByRegion } from "../utils/api";
 import Form from "./Form";
 class App extends Component {
   state = {
     countries: [],
   };
-  getAll = () => {
-    fetch("https://restcountries.eu/rest/v2/all")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        this.setState({ countries: data });
-      })
-      .catch(() => {
-        console.log("error");
-      });
+
+  searchByName = (name) => {
+    getCountryByName(name).then((data) => {
+      this.setState({ countries: data });
+    });
   };
 
-  getCountryByName = (name) => {
-    fetch(`https://restcountries.eu/rest/v2/name/${name}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        this.setState({ countries: data });
-      })
-      .catch(() => {
-        console.log("error");
-      });
+  searchByRegion = (region) => {
+    getCountryByRegion(region).then((data) => {
+      this.setState({ countries: data });
+    });
   };
 
-  getCountryByRegion = (region) => {
-    fetch(`https://restcountries.eu/rest/v2/region/${region}`)
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        this.setState({ countries: data });
-      })
-      .catch(() => {
-        console.log("error");
-      });
+  showAll = () => {
+    getAll().then((data) => {
+      this.setState({ countries: data });
+    });
   };
 
   componentDidMount() {
-    this.getAll();
+    this.showAll();
   }
 
   render() {
     const { countries } = this.state;
-    // console.log(countries);
-    let i = 0;
     return (
+
       <div>
-        <Header />
+        <Header toggleTheme={this.props.toggleTheme} />
         <main>
           <Form
             countries={this.countries}
-            getAll={this.getAll}
-            getCountryByName={this.getCountryByName}
-            getCountryByRegion={this.getCountryByRegion}
+            showAll={this.showAll}
+            searchByName={this.searchByName}
+            searchByRegion={this.searchByRegion}
           />
           <div className="grid" ref={this.grid}>
-            {countries &&
+            {countries && countries.length&&
               countries.map((c) => (
                 <Link
-                  key={i++}
+                  key={c.name}
                   to={`/details/${c.alpha3Code}`}
                   className="card"
                 >

@@ -2,37 +2,30 @@ import React, { Component } from "react";
 import Header from "./Header";
 import { Link } from "react-router-dom";
 import "../index.scss";
+import { getCountryByCode } from "../utils/api";
 import BasicDetails from "./BasicDetails";
 class Details extends Component {
   state = {
     country: {},
   };
 
-  getCountryByCode = (code) => {
-    fetch(`https://restcountries.eu/rest/v2/alpha?codes=${code}`)
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        this.setState({ country: data[0] });
-      })
-      .catch(() => {
-        console.log("error");
-      });
+  searchByCode = (code) => {
+    getCountryByCode(code).then((data) => {
+      this.setState({ country: data[0] });
+    });
   };
 
-  handleRefresh = () => {
-    this.getCountryByCode(this.props.match.params.countryCode);
-  };
   componentDidMount() {
-    this.getCountryByCode(this.props.match.params.countryCode);
+    this.searchByCode(this.props.countryCode);
   }
   render() {
     const { country } = this.state;
-    this.handleRefresh(this.props.match.params.countryCode);
+    console.log(this.props);
+    this.searchByCode(this.props.countryCode);
 
     return (
       <div>
-        <Header />
+        <Header toggleTheme={this.props.toggleTheme} />
         <main className="country-info">
           <Link className="back-btn" to="/">
             <i className="fas fa-long-arrow-alt-left icon"></i>Back
